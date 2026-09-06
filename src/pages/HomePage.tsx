@@ -3,7 +3,6 @@ import ProductCard from "../components/ProductCard";
 import useFetch from "../hooks/useFetch";
 import type { Product } from "../types/product";
 import SearchBar from "../components/SearchBar";
-import { FavoriteButton } from "../components/ProductDetails";
 
 const HomePage = () => {
   const [search, setSearch] = useState<string>("");
@@ -27,13 +26,10 @@ const HomePage = () => {
   );
 
   return (
-    <div>
+    <div className="products-grid">
       <SearchBar search={search} setSearch={setSearch} />
       {filteredProduct.map((product) => (
-        <>
-          <ProductCard key={product.id} product={product} />
-          <FavoriteButton product={product} />
-        </>
+        <ProductCard key={product.id} product={product} />
       ))}
     </div>
   );

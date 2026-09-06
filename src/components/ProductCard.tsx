@@ -1,5 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import type { Product } from "../types/product";
+import FavoriteButton from "./ProductDetails";
 
 interface ProductProps {
   product: Product;
@@ -16,6 +17,7 @@ const ProductCard = ({ product }: ProductProps) => {
         <button onClick={() => navigate(`/products/${product.id}`)}>
           View ...
         </button>
+        <FavoriteButton product={product} />
       </article>
     </>
   );

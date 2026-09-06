@@ -11,7 +11,7 @@ const Header = () => {
         <ThemeToggle />
         <nav className="nav">
           <Link to={"/"}>Home Page</Link>
-          <Link to={"/products/:id"}>Product</Link>
+
           <div className="favorites">
             <Link to={"/favorites"}>Favorites</Link>({favorites.length})
           </div>

@@ -7,7 +7,7 @@ interface FavoriteProps {
 
 const FavoritesItem = ({ product }: FavoriteProps) => {
   return (
-    <div>
+    <div className="favoriteItem">
       <img src={product.image} alt={product.title} />
       <p>Title : {product.title}</p>
       <p>Price : {product.price}</p>
